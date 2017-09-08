@@ -15,11 +15,17 @@ int main(){
   while(run){
 
     char *string = malloc(sizeof(100));
-
     write(1, "$ ", 2);
     read(0, string, 100);
+    printf("string: %s \n", string);
+
+    for(int i = 0; string[i] != 0; i++){
+      if(string[i] == '\n'){
+	string[i] = '\0';
+      }
+    } 
     
-    char ** token = mytoc(string , ' ');
+    char ** token = mytoc("I love you guccis :)" , ' ');
 
    
 
