@@ -1,7 +1,8 @@
 #ifndef TOKENIZER_H
 #define TOKENIZER_H
 
-void setIndex(int i);
+void setTrackers(int i);
+int getVectorSize();
 char* stringcpy(char* tokenVec, char *str, char delim);
 int letterCount(char *str, char delim);
 int count(char *str, char delim);
