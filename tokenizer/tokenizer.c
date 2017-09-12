@@ -10,14 +10,18 @@ int tracker = 0;
 int atracker = 0;
 int wordCount = 0;
 
+// set tracker variables
 void setTrackers(int i){
  tracker = i;
  atracker = i;
 }
+
+// retrieve the number of words in vector
 int getVectorSize(){
   return wordCount + 1;
 }
- 
+
+// copy string into token vector
 char* stringcpy(char* tokenVec, char* str, char delim){
   
   int tvIndex = 0;
@@ -56,15 +60,14 @@ char* stringcpy(char* tokenVec, char* str, char delim){
   return tokenVec;
 }
 
+// count the number of letters in each word
 int letterCount(char* str, char delim){
 
 
   int count = 0;
   int found = 0;
-  
 
-  
-  while(str[tracker] != 0){
+ while(str[tracker] != 0){
     if(str[tracker] == ' ' && found){
       tracker++;
       return count;
@@ -83,6 +86,7 @@ int letterCount(char* str, char delim){
   return count;
 }
 
+// count the number of words
 int count(char* str, char delim){
  
   int count = 0;
@@ -105,6 +109,7 @@ int count(char* str, char delim){
    
    return count;
 }
+ // build the token vector 
   char** mytoc(char* str, char delim){
  
      wordCount = count(str, delim);
