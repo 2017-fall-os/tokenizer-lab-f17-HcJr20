@@ -26,7 +26,7 @@ int main(){
     } 
 
        char ** token = mytoc(string , ' ');
-       printf("before free: %s \n", token[0]);
+       
 
        for(int i = 0; i < getVectorSize(); i++){
 	  free(token[i]);
@@ -34,7 +34,7 @@ int main(){
 
        free(token);
 
-       printf(" after free: % s \n", token[0]);
+       
 
        setTrackers(0);
   }

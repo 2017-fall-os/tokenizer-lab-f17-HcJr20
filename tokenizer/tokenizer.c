@@ -66,12 +66,10 @@ int letterCount(char* str, char delim){
   
   while(str[tracker] != 0){
     if(str[tracker] == ' ' && found){
-      printf("count: %d \n", count);
       tracker++;
       return count;
     }
     if( (str[tracker] == '0') && found){
-       printf("count: %d \n", count);
        tracker++;
       return count;
     }
